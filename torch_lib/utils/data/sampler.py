@@ -1,4 +1,4 @@
-from torch.utils.data.sampler import *
+from torch.utils.data.sampler import Sampler
 
 
 class BinarySampler(Sampler):

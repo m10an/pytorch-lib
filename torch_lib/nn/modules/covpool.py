@@ -2,12 +2,11 @@ import torch
 import torch.nn as nn
 import torch.nn.init as init
 from . import Identity
-from .. functional import cov_pool, newton_schulz_sqrt, triuvec
+from ..functional import cov_pool, newton_schulz_sqrt, triuvec
     
 
 class iSQRTCOVPool(nn.Module):
-    """
-    iSQRT-COV pooling layer.
+    """iSQRT-COV pooling layer.
     Parameters:
     ----------
     input_features : int
@@ -31,8 +30,7 @@ class iSQRTCOVPool(nn.Module):
 
 
 class DimReduction(nn.Module):
-    """
-    Dimension reduction layer.
+    """Dimension reduction layer.
     Parameters:
     ----------
     input_features : int
@@ -74,11 +72,10 @@ class DimReduction(nn.Module):
 
 
 class ProgressiveDimReduction(nn.Module):
-    """
+    """Dimension reduction layer.
     https://arxiv.org/pdf/1703.08050.pdf
     https://arxiv.org/pdf/1904.06836.pdf 
     Based on table 4
-    Dimension reduction layer.
     Parameters:
     ----------
     input_features : int
