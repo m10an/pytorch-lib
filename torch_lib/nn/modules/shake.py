@@ -11,3 +11,7 @@ class ShakeDrop(nn.Module):
 
     def forward(self, x):
         return shake_drop(x, self.training, self.p_drop, self.alpha_range)
+
+    def extra_repr(self):
+        s = "p_drop={p_drop}, alpha_range={alpha_range}"
+        return s.format(**self.__dict__)
