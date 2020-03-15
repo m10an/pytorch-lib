@@ -137,6 +137,7 @@ class Triuvec(Function):
         return grad_x
 
 
+# TODO: pytrochcv shakedrop
 class ShakeDrop(Function):
     @staticmethod
     def forward(ctx, x, training=True, p_drop=0.5, alpha_range=[-1, 1]):
